@@ -16,8 +16,9 @@ const client = new Client({ intents: [
 
 client.commands = new Collection();
 client.events = new Collection();
+client.slashCommands = new Collection();
 
-['eventManager', 'commandManager'].forEach(manager => {
+['eventManager', 'commandManager', 'slashCommandManager'].forEach(manager => {
     require(`./managers/${manager}`)(client);
 });
 

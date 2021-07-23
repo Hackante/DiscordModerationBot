@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Hackante/DiscordModerationBot#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "discord.js": "^13.0.0-dev.07017a9.1626869177",
+    "discord.js": "^13.0.0-dev.c8ca7bf.1627041776",
     "dotenv": "^10.0.0"
   }
 }
