@@ -1,8 +1,14 @@
 const { Interaction } = require("discord.js")
 
-module.exports = (client, interaction) => {
+module.exports = async (client, interaction) => {
     if(interaction.isCommand() === true) {
-
+        let slash = await client.slashCommands.get(interaction.commandName);
+        try{
+            slash.run(client, interaction);
+        }catch{
+            interaction.reply(slash.reply)
+        }
+        
     };
     if(interaction.isButton() === true) {
 

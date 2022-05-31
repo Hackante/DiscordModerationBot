@@ -1,3 +1,5 @@
+const slashCommandManager = require('../../managers/slashCommandManager')
+
 require('colors')
 
 module.exports = async(client) => {
@@ -10,6 +12,11 @@ module.exports = async(client) => {
     `\n${client.guilds.cache.size} guild(s)`.gray +
     `\n______________________________\n`.rainbow
     )
-
-
+    
+    slashCommandManager(client)
+    
+    console.info("hi")
+    console.warn("warining!")
+    console.error("error!", )
+    console.table(client.commands)
 }

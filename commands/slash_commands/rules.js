@@ -31,11 +31,15 @@ const rules = new MessageEmbed()
     )
 
 module.exports = {
+    id: '868902946665037875',
     command: {
         name: "rules",
         description: "Shows the basic rules",
     },
     reply: {
         embeds: [rules]
+    },
+    run: async (client, interaction) => {
+        interaction.reply({embeds: [rules]})
     }
 }

@@ -18,7 +18,7 @@ client.commands = new Collection();
 client.events = new Collection();
 client.slashCommands = new Collection();
 
-['eventManager', 'commandManager', 'slashCommandManager'].forEach(manager => {
+['eventManager', 'commandManager'].forEach(manager => {
     require(`./managers/${manager}`)(client);
 });
 

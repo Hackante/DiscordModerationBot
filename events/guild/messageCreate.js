@@ -11,9 +11,9 @@ module.exports = (client, message) => {
     const args = message.content.slice(prefix.length).split(/ +/);
     let commandName = args.shift().toLowerCase();
 
-    let command = client.commands.get(commandName) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
+    let command = client.commands.get(commandName) || client.commands.find(a => a.aliases && a.aliases.includes(commandName));
 
-    if(!cooldowns.has(command.name)){
+    /*if(!cooldowns.has(command.name)){
         cooldowns.set(command.name, new Collection());
     }
 
@@ -31,7 +31,7 @@ module.exports = (client, message) => {
     };
 
     timestamps.set(message.author.id, currentTime);
-    setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+    setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);*/
 
     if(command){
         command.run(client, message, args);
